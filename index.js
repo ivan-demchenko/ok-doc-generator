@@ -7,8 +7,8 @@ const chalk = require('chalk');
 program
   .version(require('./package.json').version)
   .usage('[options]')
-  .option('-s, --source-dir <source>', 'Source directory')
-  .option('-o, --output <out>', 'Resulting JSON file path')
+  .option('-s, --source-dir <path/to/docs/root>', 'Documenation root directory')
+  .option('-o, --output <path/to/file.json>', 'Resulting JSON file path')
   .option('-i, --interactive', 'Run interactive mode')
   .parse(process.argv);
 

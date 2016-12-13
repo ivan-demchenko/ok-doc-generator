@@ -4,6 +4,13 @@ Effortless and live documentation generation.
 
 This project is a satellite for the [docsViewElm](https://github.com/raqystyle/docsViewElm) project.
 
+### How to run
+
+```
+npm i
+./index.js -h
+```
+
 ### Why
 
 Components libraries, pattern labs, etc. These are all tree like way to organise your code.
