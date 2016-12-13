@@ -1,0 +1,32 @@
+{
+  "id": 2,
+  "name": "The Library",
+  "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test",
+  "subs": [
+    {
+      "id": 3,
+      "name": "Components section",
+      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/components",
+      "subs": [
+        {
+          "id": 4,
+          "name": "The Component",
+          "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/components/the-component",
+          "subs": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Comming soon...",
+      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/empty-info",
+      "subs": []
+    },
+    {
+      "id": 3,
+      "name": "Modules section",
+      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/modules",
+      "subs": []
+    }
+  ]
+}

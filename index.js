@@ -1,34 +1,26 @@
-const path = require('path');
-const inquirer = require('inquirer');
-const generateTree = require('./generate-tree');
-const fs = require('fs');
+#!/usr/bin/env node
 
-inquirer
-.prompt([
-  {
-    type: 'input',
-    name: 'src',
-    message: 'Please, specify the directory for which the documenation should be generated:',
-    validate: ans => {
-      const parsed = path.parse(ans);
-      if (parsed.ext) {
-        return 'It must the path to the directory';
-      }
-      return true;
-    }
-  }, {
-    type: 'input',
-    name: 'dest',
-    message: 'Please, specify the path to the output JSON file:',
-    validate: ans => {
-      const parsed = path.parse(ans);
-      if (!parsed.ext || parsed.ext !== '.json') {
-        return 'You should specify the correct path to the JSON file';
-      }
-      return true;
-    }
-  }
-])
-.then(generateTree)
-.then(_ => console.log('Done'))
-.catch(console.error.bind(console));
+const program = require('commander');
+const generateTree = require('./generate-tree');
+const chalk = require('chalk');
+
+program
+  .version(require('./package.json').version)
+  .usage('[options]')
+  .option('-s, --source-dir <source>', 'Source directory')
+  .option('-o, --output <out>', 'Resulting JSON file path')
+  .option('-i, --interactive', 'Run interactive mode')
+  .parse(process.argv);
+
+if (program.interactive) {
+  require('./interactive');
+  return;
+}
+
+console.log(chalk.yellow('Generating the tree from:'));
+console.log(chalk.yellow.bold('  > ' + program.sourceDir));
+
+generateTree({src: program.sourceDir, dest: program.output});
+
+console.log(chalk.green('Done! You can now find JSON file at:'));
+console.log(chalk.green.bold('  > ' + program.output));
