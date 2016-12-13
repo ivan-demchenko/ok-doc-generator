@@ -1,17 +1,17 @@
 {
   "id": 2,
   "name": "The Library",
-  "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test",
+  "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/mocks",
   "subs": [
     {
       "id": 3,
       "name": "Components section",
-      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/components",
+      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/mocks/components",
       "subs": [
         {
           "id": 4,
           "name": "The Component",
-          "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/components/the-component",
+          "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/mocks/components/the-component",
           "subs": []
         }
       ]
@@ -19,13 +19,7 @@
     {
       "id": 3,
       "name": "Comming soon...",
-      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/empty-info",
-      "subs": []
-    },
-    {
-      "id": 3,
-      "name": "Modules section",
-      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/modules",
+      "path": "/Users/ivandemchenko/Projects/docsViewGenerator/test/mocks/empty-info",
       "subs": []
     }
   ]

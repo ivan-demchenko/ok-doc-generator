@@ -2,6 +2,7 @@ const path = require('path');
 const inquirer = require('inquirer');
 const generateTree = require('./generate-tree');
 const fs = require('fs');
+const saveOutput = require('./save-output');
 
 inquirer
 .prompt([
@@ -29,6 +30,6 @@ inquirer
     }
   }
 ])
-.then(generateTree)
+.then(ans => saveOutput(ans.dest, generateTree(ans.src)))
 .then(_ => console.log('Done, JSON file has been generated successfully!'))
 .catch(console.error.bind(console));

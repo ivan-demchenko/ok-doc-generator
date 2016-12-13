@@ -3,6 +3,7 @@
 const program = require('commander');
 const generateTree = require('./generate-tree');
 const chalk = require('chalk');
+const saveOutput = require('./save-output');
 
 program
   .version(require('./package.json').version)
@@ -20,7 +21,7 @@ if (program.interactive) {
 console.log(chalk.yellow('Generating the tree from:'));
 console.log(chalk.yellow.bold('  > ' + program.sourceDir));
 
-generateTree({src: program.sourceDir, dest: program.output});
+saveOutput(program.output, generateTree(program.sourceDir));
 
 console.log(chalk.green('Done! You can now find JSON file at:'));
 console.log(chalk.green.bold('  > ' + program.output));

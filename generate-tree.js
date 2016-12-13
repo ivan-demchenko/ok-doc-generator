@@ -52,12 +52,8 @@ const traverse = R.curry((id, src) => {
 
 
 /**
- * * Takes the directory and returns the JSON
- * @param  {{src:String, dest:String}} config
+ * Takes the directory and returns the JSON
+ * @param  {string} docsPath
  * @return {Promise}
  */
-module.exports = config => fs.writeFileSync(
-  path.resolve(config.dest),
-  JSON.stringify(traverse(0, path.resolve(config.src)), null, 2),
-  {encoding:'utf8'}
-);
+module.exports = docsPath => traverse(0, path.resolve(docsPath));
