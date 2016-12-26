@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const generateTree = require('./generate-tree');
+const generateTree = require('./lib/generate-tree');
 const chalk = require('chalk');
-const saveOutput = require('./save-output');
+const saveOutput = require('../lib/save-output');
 
 program
-  .version(require('./package.json').version)
-  .usage('[options]')
-  .option('-s, --source-dir <path/to/docs/root>', 'Documenation root directory')
-  .option('-o, --output <path/to/file.json>', 'Resulting JSON file path')
-  .option('-i, --interactive', 'Run interactive mode')
-  .parse(process.argv);
+.version(require('./package.json').version)
+.usage('[options]')
+.option('-s, --source-dir <path/to/docs/root>', 'Documenation root directory')
+.option('-o, --output <path/to/file.json>', 'Resulting JSON file path')
+.option('-i, --interactive', 'Run interactive mode')
+.parse(process.argv);
 
 if (program.interactive) {
-  require('./interactive');
+  require('../lib/interactive');
   return;
 }
 

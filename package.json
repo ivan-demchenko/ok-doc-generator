@@ -1,13 +1,26 @@
 {
-  "name": "docs-view-generator",
+  "name": "ok-doc-generator",
   "version": "0.3.0",
   "description": "The documentation JSON generator",
-  "main": "index.js",
+  "main": "./bin/ok-doc-generator",
   "scripts": {
     "test": "mocha"
   },
   "author": "Ivan Demchenko (raqy.style@gmail.com)",
   "license": "MIT",
+  "preferGlobal": true,
+  "homepage": "https://github.com/raqystyle/ok-doc-generator",
+  "bin": {
+    "ok-doc-generator": "./bin/ok-doc-generator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raqystyle/ok-doc-generator.git"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "dependencies": {
     "chai": "^3.5.0",
     "chalk": "^1.1.3",

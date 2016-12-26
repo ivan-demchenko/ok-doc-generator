@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 const resolve = require('path').resolve;
-const generateTree = require('../generate-tree');
+const generateTree = require('../lib/generate-tree');
 
 describe('Generate a tree', () => {
 
