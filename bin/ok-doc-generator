@@ -6,7 +6,7 @@ const chalk = require('chalk');
 const saveOutput = require('../lib/save-output');
 
 program
-.version(require('./package.json').version)
+.version(require('../package.json').version)
 .usage('[options]')
 .option('-s, --source-dir <path/to/docs/root>', 'Documenation root directory')
 .option('-o, --output <path/to/file.json>', 'Resulting JSON file path')
