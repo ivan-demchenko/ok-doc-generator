@@ -21,7 +21,7 @@ if (program.interactive) {
 console.log(chalk.yellow('Generating the tree from:'));
 console.log(chalk.yellow.bold('  > ' + program.sourceDir));
 
-saveOutput(program.output, generateTree(program.sourceDir));
+saveOutput(program.output, generateTree(process.cwd(), program.sourceDir));
 
 console.log(chalk.green('Done! You can now find JSON file at:'));
 console.log(chalk.green.bold('  > ' + program.output));

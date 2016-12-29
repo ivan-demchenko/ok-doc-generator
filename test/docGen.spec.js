@@ -6,22 +6,18 @@ describe('Generate a tree', () => {
 
   it('should return JSON-tree for the propely structured dir structure', (done) => {
 
-    const tree = generateTree(resolve(__dirname, './mocks/scenario1'));
+    const tree = generateTree(__dirname, './mocks/scenario1');
 
     const treeMock = JSON.stringify({
-      id: 2,
-      name: "The Library",
-      path: resolve(__dirname, "mocks/scenario1"),
-      subs: [ { id: 3,
-                name: "Components section",
-                path: resolve(__dirname, "mocks/scenario1/components"),
-                subs: [ { id: 4,
-                          name: "The Component",
-                          path: resolve(__dirname, "mocks/scenario1/components/the-component"),
+      name: 'The Library',
+      path: 'mocks/scenario1',
+      subs: [ { name: 'Components section',
+                path: 'mocks/scenario1/components',
+                subs: [ { name: 'The Component',
+                          path: 'mocks/scenario1/components/the-component',
                           subs: [] } ] },
-              { id: 3,
-                name: "Comming soon...",
-                path: resolve(__dirname, "mocks/scenario1/empty-info"),
+              { name: 'Comming soon...',
+                path: 'mocks/scenario1/empty-info',
                 subs: [] } ] }
     );
 
@@ -33,12 +29,11 @@ describe('Generate a tree', () => {
 
   it('should return JSON-tree for the almost empty docs', (done) => {
 
-    const tree = generateTree(resolve(__dirname, './mocks/scenario2'));
+    const tree = generateTree(__dirname, './mocks/scenario2');
 
     const treeMock = JSON.stringify({
-      id: 2,
-      name: "The Library",
-      path: resolve(__dirname, "mocks/scenario2"),
+      name: 'The Library',
+      path: 'mocks/scenario2',
       subs: [ ]
     });
 
