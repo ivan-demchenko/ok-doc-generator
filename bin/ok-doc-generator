@@ -4,9 +4,13 @@ const program = require('commander');
 const generateTree = require('../lib/generate-tree');
 const chalk = require('chalk');
 const saveOutput = require('../lib/save-output');
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+
+updateNotifier({pkg}).notify({defer: false});
 
 program
-.version(require('../package.json').version)
+.version(pkg.version)
 .usage('[options]')
 .option('-s, --source-dir <path/to/docs/root>', 'Documenation root directory')
 .option('-o, --output <path/to/file.json>', 'Resulting JSON file path')

@@ -30,6 +30,7 @@
     "commander": "^2.9.0",
     "fastmatter": "^1.1.1",
     "inquirer": "^2.0.0",
-    "ramda": "^0.22.1"
+    "ramda": "^0.22.1",
+    "update-notifier": "^1.0.3"
   }
 }
