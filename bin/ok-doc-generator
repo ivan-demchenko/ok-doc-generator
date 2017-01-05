@@ -5,7 +5,7 @@ const generateTree = require('../lib/generate-tree');
 const chalk = require('chalk');
 const saveOutput = require('../lib/save-output');
 const updateNotifier = require('update-notifier');
-const pkg = require('./package.json');
+const pkg = require('../package.json');
 
 updateNotifier({pkg}).notify({defer: false});
 
